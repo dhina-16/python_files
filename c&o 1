@@ -1,0 +1,15 @@
+class school:
+    def __init__(self):
+        self.name=input("Enter your name: ")
+        self.SSLC_Mark=int(input("Enter your 10th Mark: "))
+    def group(self):
+        if(self.SSLC_Mark>400):
+            print("You are going to Group1")
+            self.stream="Group1"
+        elif(self.SSLC_Mark>300 and self.SSLC_Mark<=400 ):
+            print("You are going to Group2")
+            self.stream="Group2"
+        elif(self.SSLC_Mark>=200 and self.SSLC_Mark<=300 ):
+            print("You are going to Group3")
+            self.stream="Group3"
+        self.HSC_Mark=int(input("Enter your 12th Mark: "))
