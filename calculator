@@ -1,0 +1,24 @@
+import operator
+
+def calculator():
+    operations = {"+": operator.add,"-": operator.sub,"*": operator.mul,"/": operator.truediv}
+
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            op = input("Enter operator (+, -, *, /): ")
+            num2 = float(input("Enter second number: "))
+
+            result = operations[op](num1, num2)
+            print("Result:", result)
+
+        except ValueError:
+            print("Please enter valid numbers.")
+        except KeyError:
+            print("Invalid operator.")
+        except ZeroDivisionError:
+            print("Cannot divide by zero.")
+
+        print()  
+
+calculator()
